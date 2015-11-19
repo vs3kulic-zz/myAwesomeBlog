@@ -1,0 +1,22 @@
+<h1>Write.</h1>
+<!--p>Find me in app/views/posts/new.html.erb</p>-->
+<h2>Maybe this post will change your life.</h2>
+<p>You never know.</p>
+
+
+<div class="form">
+
+	<%= form_for @post do |f| %>
+
+		<%= f.label :title %>
+		<%= f.text_field :title %> <br><br>
+
+		<%= f.label :body %>
+		<%= f.text_area :body %> <br><br>
+
+		 <%= f.submit %>
+
+	<% end %>
+
+</div>
+

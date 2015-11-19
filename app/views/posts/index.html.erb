@@ -1,0 +1,12 @@
+<h1>This is the Post Index.</h1>
+<p>Find me in app/views/posts/index.html.erb</p>
+<p>The index shows the posts as of today.</p>
+
+<% @posts.each do  |post| %>
+
+	<h2> <%= link_to post.title, show_path(post) %> </h2>
+	<!--h2> <%= post.title %> </h2-->
+	<!--p> <%= post.body %> </p-->
+	 
+<% end %>
+

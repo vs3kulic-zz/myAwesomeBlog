@@ -1,0 +1,40 @@
+<h1>Hi, welcome to the About page.</h1>
+<p>Find me in app/views/pages/about.html.erb</p>
+<p>This is a page about you. Yes, you read right. About you.</p>
+<p>Why? Well, because we owe you one, in advance. By using our service, you enable us to live out our passion day by day.</p>
+<p>But wait...you aren't using our service yet? Then it's about time! <br> So here's what we can do to make you even more successful:</p>
+<li>one</li>
+<li>two</li>
+<li>three</li>
+
+<p>Did we miss something that you really, like, urgently need? Do not fret, just shoot us an email to <a href="http://www.gmail.com" target="_blank"> sekulicvajo@gmail.com </a> and we'll make sure to come up with a witty reply.</p>
+
+<!--<div class="ManuallyWritten">
+
+	<a href="/pages/about" target="_blank">About us</a>
+	<a href="/pages/contact" target="_blank"> Contact us </a>
+
+</div> -->
+
+<div class="RubyGenerated">
+	
+	<!--<%= link_to("About us", controller: :pages, action: :about) %>
+	<%= link_to("Contact us", controller: :pages, action: :contact) %> -->
+
+	<p> <%= link_to("About us", about_path) %> </p>
+	<p> <%= link_to("Contact us", contact_path, :target => "_blank") %> </p>
+	<p> <%= link_to("Go create", posts_path, :target => "_blank") %> </p>
+
+</div>
+
+<div class="inline_picture1">
+
+	<%= image_tag("technical_drawing.jpg", alt: "technical_drawing_inline") %>
+
+</div>
+
+<div class="background_picture">
+
+	<%= image_tag("technical_image.jpg", alt: "technical_image_background") %> 
+
+</div>

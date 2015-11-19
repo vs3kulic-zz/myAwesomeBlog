@@ -1,0 +1,11 @@
+.background_picture {
+	width: 480px;
+	height: 480px;
+	background-image: url("technical_image.jpg");
+}
+
+.inline_picture1 {
+	width: 480px;
+	height: 480px;
+}
+
