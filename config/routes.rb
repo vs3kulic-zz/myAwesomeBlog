@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
 
-  resources :posts
-
   get 'posts/edit'
 
   get 'posts/show'
