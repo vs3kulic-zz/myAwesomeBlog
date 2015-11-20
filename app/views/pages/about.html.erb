@@ -1,6 +1,7 @@
-<h1>Hi, welcome to the About page.</h1>
-<p>Find me in app/views/pages/about.html.erb</p>
-<p>This is a page about you. Yes, you read right. About you.</p>
+<h1>Hi, welcome Home.</h1>
+
+<p>This is the landing page. </p>
+<p>And it's all about you. Yes, you read right. About you.</p>
 <p>Why? Well, because we owe you one, in advance. By using our service, you enable us to live out our passion day by day.</p>
 <p>But wait...you aren't using our service yet? Then it's about time! <br> So here's what we can do to make you even more successful:</p>
 <li>one</li>
@@ -21,15 +22,7 @@
 	<!--<%= link_to("About us", controller: :pages, action: :about) %>
 	<%= link_to("Contact us", controller: :pages, action: :contact) %> -->
 
-	<p> <%= link_to("About us", about_path) %> </p>
-	<p> <%= link_to("Contact us", contact_path, :target => "_blank") %> </p>
-	<p> <%= link_to("Go create", posts_path, :target => "_blank") %> </p>
-
-</div>
-
-<div class="inline_picture1">
-
-	<%= image_tag("technical_drawing.jpg", alt: "technical_drawing_inline") %>
+	<p> <%= link_to("About us", about_path) %> | <%= link_to("Contact us", contact_path, :target => "_blank") %> | <%= link_to("Go create", posts_path, :target => "_blank") %> </p>
 
 </div>
 
