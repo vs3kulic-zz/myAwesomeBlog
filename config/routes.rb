@@ -8,9 +8,9 @@ Rails.application.routes.draw do
   get 'pages/about' => 'pages#about', as: :about
   get 'pages/contact' => 'pages#contact', as: :contact
   
-  get '/posts' => 'posts#index'#, as: :index
+  get '/posts' => 'posts#index', as: :posts
   
-  get '/posts/new' => 'posts#new'#, as: :posts
+  get '/posts/new' => 'posts#new', as: :new_post
   post '/posts' => 'posts#create'
   patch '/posts/:id' => 'posts#update'
   

@@ -1,4 +1,4 @@
-<h1>This is the Post Index.</h1>
+<h1>This is the Post Index. <%= link_to 'New Post >', new_post_path %> </h1>
 <p>Find me in app/views/posts/index.html.erb</p>
 <p>The index shows the posts as of today.</p>
 
@@ -7,6 +7,7 @@
 	<div class='panel'> 
 
 		<h2> <%= link_to post.title, post_path(post) %> </h2>
+		<p> <%= link_to 'edit', edit_post_path(post) %> </p>
 		<!--p> <%= post.body %> </p-->
 
 	</div>
