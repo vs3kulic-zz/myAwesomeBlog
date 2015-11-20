@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :posts
 
   get 'posts/edit'
 
@@ -18,7 +19,7 @@ Rails.application.routes.draw do
   get '/posts/:id' => 'posts#show', as: :post
   get '/posts/:id/edit' => 'posts#edit', as: :edit_post
 
-
+  
 
 
   get 'welcome/index'
