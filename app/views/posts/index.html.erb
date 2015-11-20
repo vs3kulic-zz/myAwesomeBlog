@@ -4,9 +4,12 @@
 
 <% @posts.each do  |post| %>
 
-	<h2> <%= link_to post.title, post_path(post) %> </h2>
-	<!--h2> <%= post.title %> </h2-->
-	<!--p> <%= post.body %> </p-->
+	<div class='panel'> 
+
+		<h2> <%= link_to post.title, post_path(post) %> </h2>
+		<!--p> <%= post.body %> </p-->
+
+	</div>
 	 
 <% end %>
 

@@ -1,17 +1,23 @@
 Rails.application.routes.draw do
 
 
+  get 'posts/edit'
+
   get 'posts/show'
 
   get 'pages/about' => 'pages#about', as: :about
   get 'pages/contact' => 'pages#contact', as: :contact
   
   get '/posts' => 'posts#index'#, as: :index
-  post '/posts' => 'posts#create'
-
+  
   get '/posts/new' => 'posts#new'#, as: :posts
+  post '/posts' => 'posts#create'
+  patch '/posts/:id' => 'posts#update'
   
   get '/posts/:id' => 'posts#show', as: :post
+  get '/posts/:id/edit' => 'posts#edit', as: :edit_post
+
+
 
 
   get 'welcome/index'
