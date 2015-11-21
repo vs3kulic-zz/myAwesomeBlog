@@ -133,6 +133,7 @@ hr.small {
   }
 }
 .intro-header {
+  
   background-color: #808080;
   background: no-repeat center center;
   background-attachment: scroll;
@@ -142,6 +143,15 @@ hr.small {
   -o-background-size: cover;
   margin-bottom: 50px;
 }
+
+.header1 {
+  background-image: url('home-bg.jpg') !important;
+}
+
+.header2 {
+  background-image: url('post-bg.jpg') !important;
+}
+
 .intro-header .site-heading,
 .intro-header .post-heading,
 .intro-header .page-heading {

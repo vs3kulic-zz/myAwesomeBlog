@@ -1,20 +1,40 @@
-<h1>This is the Post Index. <%= link_to 'New Post >', new_post_path %> </h1>
+<header class="intro-header header1">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="site-heading">
+                        <h1>My Awesome Blog</h1>
+                        <hr class="small">
+                        <span class="subheading">Handcrafted in 2015</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
 
-<p>The index shows the posts as of today.</p>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+				
+				<% @posts.each do  |post| %>
+               	<div class="post-preview">	
+                	<a href="post.html">
+                        <h2 class="post-title">
+                            <%= link_to post.title, post_path(post) %>
+                        </h2>
+                        <!--h3 class="post-subtitle">
+                            Problems look mighty small from 150 miles up
+                        </h3-->
+                    </a>
+                    <p class="post-meta"><%= link_to 'edit', edit_post_path(post) %> | 
+			<%= link_to 'delete', post_path(post), method: :delete, data: {confirm: 'Are you sure you want to delete this post?'} %> </p>
+                </div>
+                <hr>
+                <% end %>
 
-<% @posts.each do  |post| %>
+                </div> 
+            </div>     	
+        </div>        	
 
-	<div class='panel'> 
 
-		<h2> <%= link_to post.title, post_path(post) %> </h2>
-		
-		<p> 
-			<%= link_to 'edit', edit_post_path(post) %> | 
-			<%= link_to 'delete', post_path(post), method: :delete, data: {confirm: 'Are you sure you want to delete this post?'} %> 
-		</p>
-		<!--p> <%= post.body %> </p-->
-
-	</div>
-	 
-<% end %>
 
