@@ -4,19 +4,5 @@
 <p>You never know.</p>
 
 
-<div class="form">
-
-	<%= form_for @post do |f| %>
-
-		<%= f.label :title %>
-		<%= f.text_field :title %> <br><br>
-
-		<%= f.label :body %>
-		<%= f.text_area :body %> <br><br>
-
-		 <%= f.submit %>
-
-	<% end %>
-
-</div>
+<%= render 'form' %>
 

@@ -2,18 +2,4 @@
 <!--p>Find me in app/views/posts/edit.html.erb</p-->
 <p>This is the edit page for <%= params[:id] %> </p>
 
-<div class="form">
-
-	<%= form_for @post do |f| %>
-
-		<%= f.label :title %>
-		<%= f.text_field :title %> <br><br>
-
-		<%= f.label :body %>
-		<%= f.text_area :body %> <br><br>
-
-		 <%= f.submit %>
-
-	<% end %>
-
-</div>
+<%= render 'form' %>
