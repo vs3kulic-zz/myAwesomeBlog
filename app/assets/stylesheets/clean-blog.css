@@ -145,11 +145,11 @@ hr.small {
 }
 
 .header1 {
-  background: image-url('home-bg.jpg') !important;
+  background-image: url('home-bg.jpg') !important;
 }
 
 .header2 {
-  background: image-url('post-bg.jpg') !important;
+  background-image: url('post-bg.jpg') !important;
 }
 
 .intro-header .site-heading,
