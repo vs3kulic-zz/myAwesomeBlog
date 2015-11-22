@@ -38,9 +38,10 @@ Rails.application.configure do
   config.active_support.deprecation = :stderr
 
   # Raises error for missing translations
-  # config.action_view.raise_on_missing_translations = true
-    config.serve_static_assets = true
-    config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect'
-    config.assets.compile = true
+  
+  config.cache_classes = true
+  config.serve_static_assets = true
+  config.assets.compile = true
+  config.assets.digest = true
 
 end
