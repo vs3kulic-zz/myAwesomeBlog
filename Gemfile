@@ -16,10 +16,15 @@ gem 'tilt', '~> 2.0.1'
 #REFACTOR THIS#
 #gem 'rails_12factor', group: :production
 
-#group :production do
- # gem 'pg', '~> 0.18.3'
-  # gem 'rails_12factor', '~> 0.0.3'
+
+gem 'rails_12factor', group: :production
+
+
+#group :development do
+ # gem 'rails_12factor', '~> 0.0.3'
 # end
+
+
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
