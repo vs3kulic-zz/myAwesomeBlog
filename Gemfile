@@ -9,17 +9,17 @@ gem 'rails', '4.2.4'
 # gem 'pg'
 # end
 
-group :development do
-  gem 'sqlite3'
-end
+
+gem 'pg'
+gem 'tilt', '~> 2.0.1'
 
 #REFACTOR THIS#
 #gem 'rails_12factor', group: :production
 
-group :production do
-  gem 'pg', '~> 0.18.3'
-  gem 'rails_12factor', '~> 0.0.3'
-end
+#group :production do
+ # gem 'pg', '~> 0.18.3'
+  # gem 'rails_12factor', '~> 0.0.3'
+# end
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
