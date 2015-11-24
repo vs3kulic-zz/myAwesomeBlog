@@ -44,5 +44,6 @@ Rails.application.configure do
   config.assets.compile = true
   config.assets.digest = true
 
+  # config.action_view.raise_on_missing_translations = true
 
 end
