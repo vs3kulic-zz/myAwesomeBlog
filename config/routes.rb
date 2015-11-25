@@ -1,26 +1,27 @@
 Rails.application.routes.draw do
 
-  resources :articles
-  get 'posts/_form'
-
-  get 'posts/edit'
-
-  get 'posts/show'
-
   get 'pages/about' => 'pages#about', as: :about
   get 'pages/contact' => 'pages#contact', as: :contact
-  
-  get '/posts' => 'posts#index', as: :posts
-  post '/posts' => 'posts#create'
 
-  get '/posts/new' => 'posts#new', as: :new_post
-  patch '/posts/:id' => 'posts#update'
-  delete '/posts/:id' => 'posts#destroy', as: :delete
-  
-  get '/posts/:id' => 'posts#show', as: :post
-  get '/posts/:id/edit' => 'posts#edit', as: :edit_post
+  resources :articles
 
+  resources :posts do 
+    resources :comments 
+  end
+
+  #get 'posts/_form'
+  #get 'posts/edit'
+  #get 'posts/show'
   
+  #get '/posts' => 'posts#index', as: :posts
+  #post '/posts' => 'posts#create'
+
+  #get '/posts/new' => 'posts#new', as: :new_post
+  #patch '/posts/:id' => 'posts#update'
+  #delete '/posts/:id' => 'posts#destroy', as: :delete
+  
+  #get '/posts/:id' => 'posts#show', as: :post
+  #get '/posts/:id/edit' => 'posts#edit', as: :edit_post
 
 
   get 'welcome/index'
