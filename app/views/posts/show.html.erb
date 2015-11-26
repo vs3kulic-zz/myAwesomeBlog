@@ -3,9 +3,11 @@
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <div class="post-heading">
-                        <h1> <%= @post.title %> </h1>
+                        <h1> <%= @post.title %> 
+                        </h1>
                         <h2 class="subheading"><%= link_to 'edit', edit_post_path(@post) %> | <%= link_to 'delete', post_path(@post), method: :delete, data: {confirm: 'Are you sure you want to delete this post?'} %></h2>
-                        <span class="meta">Posted by <a href="https://twitter.com/vs3kulic" target="_blank">vs3kulic</a></span>
+                        <span class="meta">Posted by <a href="https://twitter.com/vs3kulic" target="_blank">vs3kulic</a>
+                        </span>
                     </div>
                 </div>
             </div>
@@ -19,16 +21,28 @@
                     <p>
                     	<%= @post.body %>
                     </p>
+
                 </div>    
             </div>
-        </div>            
+        </div>
 </article>
 
+<footer>
 
-<!--h1> From Vienna with Love. <%= link_to '< Back', posts_path %> </h1> 
-<p> Post No. <%=params[:id]%> </p> <br>
+    <h2>Comments</h2>
+    <%= render @post.comments %>
 
-<h2> <%= @post.title %> </h2>
-<p> <%= @post.body %> </p>
+    <h2>Leave a comment:</h2>
 
-<p> <%= link_to 'edit', edit_post_path(@post) %> | <%= link_to 'delete', post_path(@post), method: :delete, data: {confirm: 'Are you sure you want to delete this post?'} %> </p>
+        <%= form_for [@post, @post.comments.build] do |f| %>
+            
+            <%= f.label :name %>
+            <%= f.text_field :name %> <br><br>
+
+            <%= f.label :body %>
+            <%= f.text_area :body %> <br><br>
+
+            <%= f.submit %>
+        <% end %>
+
+</footer> 
