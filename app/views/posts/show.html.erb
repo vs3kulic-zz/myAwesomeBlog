@@ -30,7 +30,8 @@
 <footer>
 
     <h2>Comments</h2>
-    <%= render @post.comments %>
+    <%= render @post.comments.order('created_at DESC').all %>
+    <!--%= render @post.comments.order('created_at DESC') %-->
 
     <h2>Leave a comment:</h2>
 
