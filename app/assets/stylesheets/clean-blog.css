@@ -144,12 +144,20 @@ hr.small {
   margin-bottom: 50px;
 }
 
+.headerIndex {
+  background-image: url('letter_pile.jpg') !important;
+}
+
 .header1 {
   background-image: url('home-bg.jpg') !important;
 }
 
 .header2 {
   background-image: url('technical_image.jpg') !important;
+}
+
+.header3 {
+  background-image: url('star_wars_the_force_awakens.jpg') !important;
 }
 
 .intro-header .site-heading,
