@@ -40,7 +40,7 @@ Rails.application.configure do
   # config.action_view.raise_on_missing_translations = true
 
 config.cache_classes = true
-config.serve_static_assets = true
+config.serve_static_files = true
 config.assets.compile = true
 config.assets.digest = true 
 
