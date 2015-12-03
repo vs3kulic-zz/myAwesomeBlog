@@ -157,7 +157,7 @@ hr.small {
 }
 
 .header3 {
-  background-image: url('star_wars_the_force_awakens.jpg') !important;
+  background-image: url('buffer_me.jpg') !important;
 }
 
 .intro-header .site-heading,
@@ -281,9 +281,15 @@ hr.small {
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px;
 }
+
 footer {
   padding: 50px 0 65px;
 }
+
+.contact {
+  background-image: url('contact-bg.jpg') !important; 
+}
+
 footer .list-inline {
   margin: 0;
   padding: 0;
