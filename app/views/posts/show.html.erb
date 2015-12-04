@@ -18,11 +18,15 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                    <p> <%= @post.body %> </p>
+                    
+                    <div class="large"> <%= @post.body %> 
+                    </div>
                        
+                       <% if @post.comments.count > 0 %>
                         <hr>
                         <h4>Comments</h4>
                         <hr>
+                       <% end %> 
 
                         <%= render @post.comments.order('created_at DESC').all %>
                 </div>    

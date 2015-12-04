@@ -1,5 +1,27 @@
-<h1>Edit post. <%= link_to '< Back', posts_path %> </h1>
-<!--p>Find me in app/views/posts/edit.html.erb</p-->
-<p>This is the edit page for <%= params[:id] %> </p>
+<header class="intro-header header2">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="post-heading">
+                        <h1> <%= @post.title %> 
+                        </h1>
+                        <h2 class="subheading"><%= link_to 'back', post_path(@post) %> </h2>
+                        <span class="meta">Posted by <a href="https://twitter.com/vs3kulic" target="_blank">vs3kulic</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
 
-<%= render 'form' %>
+<article>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                   
+                    <%= render 'form' %>
+
+                </div>    
+            </div>
+        </div>
+</article>
