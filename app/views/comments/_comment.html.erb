@@ -1,4 +1,17 @@
-<div class='comment'>
+<div class="panel panel-default">
+
+  <div class="panel-heading"> <%= comment.name %> </div>
+  
+  	<div class="panel-body"> <%= comment.body %> 
+  		<p> <%= link_to 'delete', [comment.post, comment], method: :delete, data: 
+			{confirm: 'Are you sure you want to delete the comment?'} %> </p>
+	</div>
+
+
+
+</div> 
+
+<!--div class='comment'>
 
 <p>
 <strong>Comment name:</strong> <br>
@@ -14,4 +27,4 @@
 	<%= link_to 'delete', [comment.post, comment], method: :delete, data: {confirm: 'Are you sure you want to delete the comment?'} %>
 </p>
 
-</div>
+</div-->

@@ -1,27 +1,39 @@
-<div class="form">
+				<%= form_for @post do |f| %>
 
-	<% if @post.errors.any? %>
-		
-		<ul>
-			<% @post.errors.full_messages.each do |message| %>
-			<li> <%= message %> </li>
-		<% end %>
+					<% if @post.errors.any? %>
+						
+						<ul>
+							<% @post.errors.full_messages.each do |message| %>
+							<li> <%= message %> </li>
+							<% end %>
+						</ul>
+					<% end %>
 
-		</ul>
+                    <div class="row control-group">
+                        <div class="form-group col-xs-12 floating-label-form-group controls">
+                            <%= f.label :title %>
+                            <%= f.text_field :title, class: "form-control", placeholder: "Title" %>
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
 
-	<% end %>
 
+                    <div class="row control-group">
+                        <div class="form-group col-xs-12 floating-label-form-group controls">
+                            <%= f.label :body %>
+                            <%= f.text_area :body, class: "form-control", placeholder: "Body" %>
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
 
-	<%= form_for @post do |f| %>
+                    <br>
 
-		<%= f.label :title %>
-		<%= f.text_field :title %> <br><br>
+                    <div id="success"></div>
 
-		<%= f.label :body %>
-		<%= f.text_area :body %> <br><br>
+                    <div class="row">
+                        <div class="form-group col-xs-12">
+                            <%= f.submit class: "btn btn-default" %>
+                        </div>
+                    </div>
 
-		 <%= f.submit %>
-
-	<% end %>
-
-</div>
+				<% end %>

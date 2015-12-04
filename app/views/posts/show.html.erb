@@ -18,32 +18,65 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                    <p>
-                    	<%= @post.body %>
-                    </p>
+                    <p> <%= @post.body %> </p>
+                       
+                        <hr>
+                        <h4>Comments</h4>
+                        <hr>
 
+                        <%= render @post.comments.order('created_at DESC').all %>
                 </div>    
             </div>
         </div>
 </article>
 
-<footer>
+<div class="lightbg">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 
-    <h2>Comments</h2>
-    <%= render @post.comments.order('created_at DESC').all %>
-    <!--%= render @post.comments.order('created_at DESC') %-->
-
+                <!-- Contact Form - Enter your email address on line 19 of the mail/contact_me.php file to make this form work. -->
+                <!-- WARNING: Some web hosts do not allow emails to be sent through forms to common mail hosts like Gmail or Yahoo. It's recommended that you use a private domain email address! -->
+                <!-- NOTE: To use the contact form, your site must be on a live web host with PHP! The form will not work locally! -->
+                
     <h2>Leave a comment:</h2>
 
-        <%= form_for [@post, @post.comments.build] do |f| %>
-            
-            <%= f.label :name %>
-            <%= f.text_field :name %> <br><br>
+                <%= form_for [@post, @post.comments.build] do |f| %>
+                    <div class="row control-group">
+                        <div class="form-group col-xs-12 floating-label-form-group controls">
+                             
+                             <%= f.label :name %>
+                             <%= f.text_field :name, class: "form-control", placeholder: "Name" %>
 
-            <%= f.label :body %>
-            <%= f.text_area :body %> <br><br>
+                            <!--p class="help-block text-danger"></p-->
 
-            <%= f.submit %>
-        <% end %>
+                        </div>
+                    </div>
 
-</footer> 
+                    <div class="row control-group">
+                        <div class="form-group col-xs-12 floating-label-form-group controls">
+                            
+                            <%= f.text_area :body, class: "form-control", placeholder: "Body" %>
+
+                            <!--p class="help-block text-danger"></p-->
+
+                        </div>
+                    </div>
+
+                    <br>
+                    <div id="success"></div>
+
+                    <div class="row">
+                        <div class="form-group col-xs-12">
+
+                            <%= f.submit class: "btn btn-default"%>
+
+                        </div>
+                    </div>
+
+                <% end %>
+
+            </div>
+        </div>
+    </div>
+</div>
