@@ -1,12 +1,12 @@
 				<%= form_for @post do |f| %>
 
 					<% if @post.errors.any? %>
-						
 						<ul>
 							<% @post.errors.full_messages.each do |message| %>
 							<li> <%= message %> </li>
 							<% end %>
 						</ul>
+                        redirect_to :back
 					<% end %>
 
                     <div class="row control-group">
