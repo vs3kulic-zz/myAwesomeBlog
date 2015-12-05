@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  before_action :authenticate_user!, :except => [:index, :show]
   before_action :find_post, only: [:show, :edit, :update, :destroy] #replaces @post = Post.find(params[:id])
 
   def index

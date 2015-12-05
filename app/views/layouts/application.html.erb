@@ -35,9 +35,12 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-
                     
                     <li> <%= link_to "Create new post", new_post_path %> </li>
+                    
+                    <% if user_signed_in? %>
+                    <li> <%= link_to "Sign out", destroy_user_session_path, method: :delete %> <li>
+                    <%end%>
 
                 </ul>
             </div>
@@ -47,9 +50,15 @@
     </nav>
 
 
-  <% if flash[:notice] %>
-    <div class="notice"><%= flash[:notice] %></div>
-  <% end %>
+  <!--% if flash[:notice] %-->
+    <!--div class="notice"><%= flash[:notice] %></div-->
+  <!--% end %-->
+
+    <% if user_signed_in? %>
+      <div class="notice">  <%= flash[:notice] %> </div>
+        <!--%= link_to "Sign out", destroy_user_session_path, method: => 'delete' %-->
+    <%end%>
+
 
 <%= yield %>
 

@@ -39,6 +39,9 @@ Rails.application.configure do
 
   # Raises error for missing translations
   
+  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+  config.action_mailer.delivery_method = :smtp 
+
   config.cache_classes = true
   config.serve_static_files = true
   config.assets.compile = true
