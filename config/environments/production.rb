@@ -80,6 +80,21 @@ Rails.application.configure do
   #config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
   #config.action_mailer.delivery_method = :smtp 
 
+  config.action_mailer.default_url_options = { :host => 'mysterious-sea-5311.herokuapp.com' }  
+  config.action_mailer.delivery_method = :smtp  
+  config.action_mailer.perform_deliveries = true  
+  config.action_mailer.raise_delivery_errors = false  
+  config.action_mailer.default :charset => "utf-8"  
+  config.action_mailer.smtp_settings = {  
+  address: "smtp.gmail.com",
+  port: 587,
+  domain: "mysterious-sea-5311.herokuapp.com",
+  authentication: "login",
+  enable_starttls_auto: true,
+  user_name: ENV["sekulicvajo@gmail.com"],
+  password: ENV["1248manageR00"]
+}
+
   config.cache_classes = true
   config.serve_static_files = true
   config.assets.compile = true
