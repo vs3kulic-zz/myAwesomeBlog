@@ -17,3 +17,5 @@
 /tmp
 
 public/assets/application-398fbf3a2e3e581cefb4a152295fbcd276aac1409683bef591732250302b2df0.css
+
+app/views/pages/about.html.erb
