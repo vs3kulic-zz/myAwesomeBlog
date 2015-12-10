@@ -421,6 +421,20 @@ img::-moz-selection {
   color: white;
   background: transparent;
 }
+
 body {
   webkit-tap-highlight-color: #0085a1;
+}
+
+.about-pic {
+
+  background: no-repeat center center;
+  background-attachment: scroll;
+
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+
+  position: absolute;
 }
