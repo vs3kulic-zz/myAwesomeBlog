@@ -50,10 +50,25 @@
 
   // Load Analytics.js with your key, which will automatically
   // load the tools you've enabled for your account. Boosh!
-  window.analytics.load('YOUR_API_TOKEN');
+  window.analytics.load('GnmD7hl07xdYwt5IHiX1hueqm6k2QPPj');
 
   // Make the first page call to load the integrations. If
   // you'd like to manually name or tag the page, edit or
   // move this call however you'd like.
   /*  */
   window.analytics.page();
+
+  // accommodate Turbolinks and track page views
+$(document).on('ready page:change', function() {
+  analytics.page();
+})
+
+// accommodate Turbolinks
+// track page views and form submissions
+$(document).on('ready page:change', function() {
+  console.log('page loaded');
+  analytics.page();
+  analytics.trackForm($('#new_visitor'), 'Signed Up');
+  analytics.trackForm($('#new_contact'), 'Contact Request');
+})
+
