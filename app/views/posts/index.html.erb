@@ -17,19 +17,36 @@
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 				
 				<% @posts.each do  |post| %>
-               	<div class="post-preview">	
-                	<a href="post.html">
+               	
+                <div class="post-preview">	
+                    
+                    <a href="post.html">
+                        
+                    <% if user_signed_in? %>
+
                         <h2 class="post-title">
+                                <%= link_to post.title, post_path(post) %>
+                        </h2>
+
+                            <p class="post-meta">
+                                <%= link_to 'edit', edit_post_path(post) %> | 
+                                <%= link_to 'delete', post_path(post), method: :delete, data: {confirm: 'Are you sure you want to delete this post?'} %> 
+                            </p>
+
+                    <%else%>
+
+                         <h2 class="post-title">
                             <%= link_to post.title, post_path(post) %>
                         </h2>
-                        <!--h3 class="post-subtitle">
-                            Problems look mighty small from 150 miles up
-                        </h3-->
+
+                    <% end %>
+                    
                     </a>
-                    <p class="post-meta"><%= link_to 'edit', edit_post_path(post) %> | 
-			<%= link_to 'delete', post_path(post), method: :delete, data: {confirm: 'Are you sure you want to delete this post?'} %> </p>
+
                 </div>
+
                 <hr>
+
                 <% end %>
 
                 </div> 
