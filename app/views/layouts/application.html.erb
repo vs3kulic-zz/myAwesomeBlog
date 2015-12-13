@@ -40,10 +40,11 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     
-                    <li> <%= link_to "Create new post", new_post_path %> </li>
-                    
+                    <li> <%= link_to "Sign up for my newsletter (soon)" %> </li>
+
                     <% if user_signed_in? %>
-                    <li> <%= link_to "Sign out", destroy_user_session_path, method: :delete %> <li>
+                        <li> <%= link_to "Create new post", new_post_path %> </li>
+                        <li> <%= link_to "Sign out", destroy_user_session_path, method: :delete %> <li>
                     <%end%>
 
                 </ul>

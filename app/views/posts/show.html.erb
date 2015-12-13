@@ -58,7 +58,12 @@
                 <!-- WARNING: Some web hosts do not allow emails to be sent through forms to common mail hosts like Gmail or Yahoo. It's recommended that you use a private domain email address! -->
                 <!-- NOTE: To use the contact form, your site must be on a live web host with PHP! The form will not work locally! -->
                 
-    <h2>Leave a comment:</h2>
+    <% if user_signed_in? %>
+        <h2>Leave a comment:</h2>
+    <%else%>
+        <h2>Leave a comment:</h2>
+        <h4>You just need to <%= link_to('sign up', new_user_registration_path) %> or <%= link_to('log in', new_user_registration_path) %> first<h4>
+    <%end%>
 
                 <%= form_for [@post, @post.comments.build] do |f| %>
                     <div class="row control-group">
@@ -83,7 +88,10 @@
                     </div>
 
                     <br>
+
                     <div id="success"></div>
+
+                    <% if user_signed_in? %>
 
                     <div class="row">
                         <div class="form-group col-xs-12">
@@ -92,6 +100,8 @@
 
                         </div>
                     </div>
+
+                    <% end %>
 
                 <% end %>
 
