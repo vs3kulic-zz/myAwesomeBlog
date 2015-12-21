@@ -7,8 +7,8 @@
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 html {
   font-family: sans-serif;
-  -webkit-text-size-adjust: 100%;
-      -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 140%;
+      -ms-text-size-adjust: 140%;
 }
 
 body {
@@ -2717,6 +2717,7 @@ fieldset[disabled] .checkbox label {
   padding-right: 0;
   padding-left: 0;
 }
+
 .input-sm {
   height: 30px;
   padding: 5px 10px;
